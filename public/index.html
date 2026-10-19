@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101820">
+  <meta name="description" content="LifeDashboard Gym: organiza tus entrenamientos y registra tu progreso semanal.">
+  <title>LifeDashboard Gym</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">✦</div><div><strong>LifeDashboard</strong><small>GYM EDITION</small></div></div>
+      <div class="profile"><div class="avatar">IG</div><div><strong>Mi espacio fitness</strong><small>Plan personal</small></div></div>
+      <p class="nav-label">MENÚ PRINCIPAL</p>
+      <nav aria-label="Navegación principal">
+        <button class="nav-item active" data-page="resumen"><span>▦</span> Resumen</button>
+        <button class="nav-item" data-page="rutina"><span>✣</span> Mi rutina</button>
+        <button class="nav-item" data-page="calendario"><span>▦</span> Calendario</button>
+        <button class="nav-item" data-page="progreso"><span>↗</span> Progreso</button>
+        <button class="nav-item" data-page="ajustes"><span>⚙</span> Ajustes</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="coach-card"><span class="coach-icon">◎</span><strong>Un día a la vez</strong><p>La constancia construye resultados.</p><div class="mini-progress"><i id="sideProgress"></i></div><small id="sideCount">1 de 5 sesiones completadas</small></div><div class="sidebar-foot"><i></i> Tu progreso, a tu ritmo</div></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><button class="mobile-menu" id="menuButton" aria-label="Abrir menú">☰</button><div class="crumb">Workspace <span>›</span> <strong id="crumbPage">Resumen</strong></div><div class="top-right"><label class="search">⌕ <input id="searchInput" placeholder="Buscar ejercicio..." aria-label="Buscar ejercicio"></label><div class="top-avatar">IG</div></div></header>
+      <div class="content">
+        <section class="welcome"><div><p class="eyebrow"><i></i> TU CENTRO DE ENTRENAMIENTO</p><h1 id="pageTitle">Hoy es un buen día para avanzar.</h1><p class="subtitle">Entrena con intención. Registra tu esfuerzo. Celebra tu progreso.</p></div><div class="week-chip">▦ &nbsp; Semana de entrenamiento <b>01</b></div></section>
+        <div id="pageContent"></div>
+        <footer><span>© 2026 LifeDashboard Gym</span><span>Construye el hábito, mide tu progreso.</span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
